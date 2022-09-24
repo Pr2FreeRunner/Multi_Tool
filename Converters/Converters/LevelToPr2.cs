@@ -136,8 +136,8 @@ namespace Converters.Converters
 
         private string GetGameMode(Level level)
         {
-            if (level.GameMode != null)
-                return level.GameMode.PR2Name;
+            if (level?.GameMode?.PR2Name != null)
+                return level.GameMode.PR2Name.ToLowerInvariant();
 
             return GameMode.DEFAULT;  
         }
